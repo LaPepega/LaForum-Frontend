@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<div class="mainDiv">
+	<h1>Posts</h1>
+</div>
+
+<style>
+	.mainDiv {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+
+	h1 {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		color: aliceblue;
+	}
+</style>
