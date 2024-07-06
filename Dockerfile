@@ -1,6 +1,6 @@
 FROM node:alpine
 
-EXPOSE 3000
+EXPOSE 3000:3000
 
 COPY . /LaForum-Frontend
 
