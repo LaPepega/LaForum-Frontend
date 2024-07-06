@@ -1,13 +1,22 @@
+<script lang="ts">
+	import { PostData } from "$lib/ApiStructures";
+	let nickname: string;
+	let postText: string;
+	function newPost() {
+		new PostData(nickname,postText).sendCreateRequest()
+	}
+</script>
+
 <div class="mainDiv">
 	<div class="bar">
 		<h1>Posts</h1>
 	</div>
 	<div class="postBox">
 		<div class="postBar">
-			<input type="text" id="nickInput" class="grayBorder" maxlength="26">
-			<button id="postButton">Post!</button>
+			<input bind:value={nickname} type="text" id="nickInput" class="grayBorder" maxlength="26">
+			<button on:click={newPost} id="postButton">Post!</button>
 		</div>
-		<textarea id="postInput" class="grayBorder"></textarea>
+		<textarea bind:value={postText} id="postInput" class="grayBorder"></textarea>
 	</div>
 </div>
 
